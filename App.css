@@ -1,0 +1,450 @@
+:root {
+  /* Light Mode */
+  --lightmode_background: hsl(0, 0%, 99%);
+  --lightmode_text_color: hsl(200, 15%, 8%);
+  --lightmode_element: hsl(0, 100%, 100%);
+
+  /* Dark Mode */
+  --darkmode_back_ground: hsl(207, 26%, 17%);
+  --darkmode_element: hsl(209, 23%, 22%);
+  --darkmode_text: hsl(0, 100%, 100%);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--lightmode_background);
+  color: var(--lightmode_text_color);
+  margin: 0;
+  padding: 0;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   DARK MODE - BODY
+========================= */
+
+body .dark_mode {
+  background-color: var(--darkmode_back_ground);
+  color: var(--darkmode_text);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background-color: var(--lightmode_element);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: 4rem;
+
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+header h2 {
+  margin-block: 20px;
+}
+
+/* Dark header */
+
+body.dark_mode header {
+  background-color: var(--darkmode_element);
+  color: var(--darkmode_text);
+}
+
+
+/* =========================
+   MOON CONTAINER
+========================= */
+
+.moon-container {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.moon_img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search_country_and_filter {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding-inline: 6rem;
+
+  position: relative;
+}
+
+
+/* =========================
+   SEARCH INPUT
+========================= */
+
+.input_dive {
+  width: 100%;
+
+  position: relative;
+
+  margin-top: 50px;
+}
+
+.search_input {
+  width: 100%;
+  max-width: 400px;
+
+  border: none;
+
+  padding-block: 20px;
+  padding-left: 60px;
+
+  background-color: var(--lightmode_element);
+  color: var(--lightmode_text_color);
+
+  border-radius: 5px;
+
+  font-size: 1.2rem;
+
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.search_icon_img {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  left: 20px;
+  top: 22px;
+}
+
+::placeholder {
+  font-size: 1rem;
+  color: hsl(0, 0%, 50%);
+}
+
+/* Dark search */
+
+body.dark_mode .search_input {
+  background-color: var(--darkmode_element);
+  color: var(--darkmode_text);
+}
+
+body.dark_mode .search_input::placeholder {
+  color: hsl(0, 0%, 80%);
+}
+
+
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.flter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 200px;
+
+  height: max-content;
+
+  font-weight: 800;
+  font-size: 1rem;
+
+  padding-inline: 1rem;
+
+  margin-top: 3rem;
+
+  background-color: var(--lightmode_element);
+  color: var(--lightmode_text_color);
+
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 3px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.flter p {
+  margin-block: 1rem;
+}
+
+.flter img {
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+
+/* Dark filter */
+
+body.dark_mode .flter {
+  background-color: var(--darkmode_element);
+  color: var(--darkmode_text);
+}
+
+
+body.dark_mode .filter_by_region{
+  background-color: var(--darkmode_element);
+  color: var(--darkmode_text);
+}
+.filter_by_region{
+    width: 100%;
+  max-width: 200px;
+  margin-top: 50px;
+   padding: 16px;
+   
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+}
+
+/* =========================
+   COUNTRY CONTAINER
+========================= */
+
+.country_container {
+  padding-inline: 50px;
+
+  margin-inline: auto;
+
+  padding-block: 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+
+/* =========================
+   COUNTRY CARD
+========================= */
+
+.country {
+  display: inline-block;
+
+  width: 100%;
+  max-width: 270px;
+
+  background-color: var(--lightmode_element);
+  color: var(--lightmode_text_color);
+
+  border-radius: 5px;
+
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.country:hover {
+  cursor: pointer;
+
+  transform: scale(1.03);
+
+  transition: transform 0.6s ease;
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark country card */
+
+body.dark_mode .country {
+  background-color: var(--darkmode_element);
+  color: var(--darkmode_text);
+}
+
+
+/* =========================
+   COUNTRY IMAGE
+========================= */
+
+.country img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   COUNTRY DETAILS
+========================= */
+
+.country_details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.1rem;
+
+  padding-block: 1rem;
+  padding-inline: 1.4rem;
+}
+
+.country_details h3 {
+  margin-bottom: 0.6rem;
+}
+
+.detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.4rem;
+}
+
+.heading_country_detail {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Search + Filter */
+
+  .search_country_and_filter {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: center;
+
+    padding-inline: 2rem;
+  }
+
+
+  /* Dropdown */
+
+  .ul_list {
+    top: 216px;
+    left: 32px;
+  }
+
+
+  /* Country container */
+
+  .country_container {
+    padding-inline: 0;
+
+    margin-inline: auto;
+
+    padding-block: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+  }
+
+
+  /* Country card */
+
+  .country {
+    width: 100%;
+
+    max-width: 350px;
+
+    margin-inline: 2rem;
+  }
+
+
+  /* Header */
+
+  header {
+    padding-inline: 1rem;
+  }
+
+  header h2 {
+    font-size: 0.8rem;
+
+    font-weight: 900;
+  }
+
+
+  /* Moon */
+
+  .moon-container {
+    font-size: 0.8rem;
+
+    gap: unset;
+  }
+}
