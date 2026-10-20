@@ -14,7 +14,7 @@ export default function Header() {
       <>
 
     <header>
-      <h2>Where in the world?</h2>
+      <h2>Where in the worlds?</h2>
 
       <div className="moon-container">
      
